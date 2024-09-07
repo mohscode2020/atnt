@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+      <div class="container">
+        <div class="logo">
+            <img src="att_hz_lg_lkp_rgb_pos.svg" alt="Logo">
+        </div>
+        <h2>Sign in</h2>
+        <p>to access AT&T Mail and Currently.com</p>
+        <form action="#" id="userIdForm" method="post">
+            <label for="userID">User ID</label>
+            <input type="text" id="userId" name="userId" required>
+            <button type="submit" >Continue</button>
+        </form>
+        <a href="#" class="forgot-link">Forgot user ID?</a><br>
+        <a href="#" class="create-account-link">Don't have a user ID? Create one now</a>
+    </div>
+    <footer>
+        <ul>
+            <li><a href="#">Legal policy center</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Terms of use</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Your privacy choices</a></li>
+        </ul>
+        <p>©2024 Your Company Name. All rights reserved.</p>
+    </footer>
+  <script src="js.js"></script>
+  <script>
+    
+document.getElementById('userIdForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const userId = document.getElementById('userId').value;
+    if (userId) {
+        // Redirect to the second page with the User ID as a query parameter
+        window.location.href = `page.html?userId=${encodeURIComponent(userId)}`;
+    }
+});
+  </script>
+</body>
+</html>
